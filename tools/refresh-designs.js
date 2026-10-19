@@ -125,7 +125,7 @@ function rebuild() {
 
   // JSON-LD item list
   const items = projects.map((p, i) =>
-    `        {"@type":"ListItem","position":${i + 1},"name":${JSON.stringify(p.name)},"url":${JSON.stringify(p.internal ? 'https://dssenan.github.io/' : p.url)}}`
+    `        {"@type":"ListItem","position":${i + 1},"name":${JSON.stringify(p.name)},"url":${JSON.stringify(p.internal ? 'https://dssen.github.io/' : p.url)}}`
   ).join(',\n');
   const ldRe = /("itemListElement":\[\n)[\s\S]*?(\n      \])/;
   if (ldRe.test(h)) h = h.replace(ldRe, (m, a, b) => { changed++; return a + items + b; });
