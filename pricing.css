@@ -1,0 +1,348 @@
+/* ══════════════════════════════════════════════════════════════
+   DANURA SENAN — Pricing page
+   Loads AFTER style.css and inherits every token from it.
+   Nothing here overrides the home page; all selectors are scoped
+   to pricing-only classes (p-prefixed) apart from two documented
+   exceptions marked EXCEPTION below.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 01 · REVEAL PRIMITIVE ────────────────────────────────── */
+/* pricing.js animates .p-rise in. Three independent failsafes keep
+   content visible if that never happens: html.p-show (set by
+   pricing.js on error and by the 5s __DSFAIL gate in the page head),
+   the reduced-motion block, and the no-JS case where .anim is absent. */
+/* .p-rise + html.p-show now live in style.css so designs.html shares them. */
+
+/* EXCEPTION 1 — style.css line ~1131 pre-hides .sechead__s for the home
+   page, where each section's own init() reveals it. No such init runs
+   here, so it must be re-shown; .p-rise on the parent header does the
+   actual animating. */
+html.anim .psec .sechead__s,
+html.anim .pcta .sechead__s{opacity:1}
+
+/* ── 02 · HERO ────────────────────────────────────────────── */
+.phero{
+  position:relative;
+  padding-block:clamp(140px,20vh,220px) clamp(60px,8vh,100px);
+  background:var(--void);overflow:hidden;
+}
+.phero__media{position:absolute;inset:0;z-index:var(--z-bg);pointer-events:none}
+.phero__in{position:relative;z-index:var(--z-content)}
+.phero__t{
+  font-family:var(--f-display);
+  font-size:var(--fs-h1);font-weight:700;
+  line-height:1.02;letter-spacing:-.035em;
+  color:var(--white);margin-top:var(--s3);max-width:16ch;
+}
+.phero__s{
+  margin-top:var(--s3);max-width:60ch;
+  color:var(--text);font-size:clamp(1rem,1.3vw,1.14rem);line-height:1.7;
+}
+.phero .cta-row{margin-top:var(--s5)}
+
+.ptrust{
+  display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);
+  margin-top:var(--s5);padding-top:var(--s4);
+  border-top:1px solid var(--line);
+}
+.ptrust li{
+  display:flex;align-items:center;
+  font-family:var(--f-mono);font-size:var(--fs-mono);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+}
+
+/* ── 03 · CATEGORY TABS ───────────────────────────────────── */
+.ptabs{
+  position:sticky;top:0;z-index:var(--z-nav);
+  background:rgba(4,7,13,.82);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-block:1px solid var(--line);
+}
+.ptabs__in{
+  display:flex;gap:4px;
+  max-width:var(--max);margin-inline:auto;
+  padding:10px var(--gut);
+  overflow-x:auto;scrollbar-width:none;
+}
+.ptabs__in::-webkit-scrollbar{display:none}
+.ptab{
+  flex:none;padding:10px 18px;border-radius:999px;
+  font-family:var(--f-mono);font-size:var(--fs-mono);font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--text);
+  border:1px solid transparent;white-space:nowrap;
+  transition:color var(--t-fast),background-color var(--t-fast),border-color var(--t-fast);
+}
+.ptab:hover{color:var(--white);background:var(--surface)}
+.ptab.is-active{
+  color:var(--white);background:var(--surface-hi);
+  border-color:rgba(255,46,151,.45);
+}
+
+/* ── 04 · SECTION SHELL ───────────────────────────────────── */
+.psec{padding-block:var(--sec-pad);background:var(--void)}
+.psec--alt{background:var(--deep)}
+.psec .sechead{margin-bottom:var(--s6)}
+.psec .sechead__t{
+  font-family:var(--f-display);
+  font-size:var(--fs-h2);font-weight:700;
+  line-height:1.04;letter-spacing:-.03em;
+  text-transform:none;color:var(--white);
+}
+
+/* ── 05 · PRICING CARDS ───────────────────────────────────── */
+.pgrid{display:grid;gap:var(--s3);align-items:stretch}
+.pgrid--4{grid-template-columns:1fr}
+.pgrid--3{grid-template-columns:1fr}
+
+.pcard{
+  position:relative;display:flex;flex-direction:column;
+  padding:var(--s5) var(--s4) var(--s4);
+  background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--sh-card);
+  transition:transform var(--t-med) var(--e-out),
+             border-color var(--t-med),
+             background-color var(--t-med);
+}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(255,46,151,.3);background:var(--surface-hi)}
+
+/* Most Popular */
+.pcard--pop{
+  border-color:rgba(255,46,151,.55);
+  background:linear-gradient(180deg,rgba(255,46,151,.07),transparent 42%),var(--surface);
+  box-shadow:var(--sh-card),0 0 60px -22px rgba(255,46,151,.55);
+}
+.pcard--pop:hover{border-color:var(--pink)}
+.pcard__badge{
+  position:absolute;top:-11px;left:var(--s4);
+  padding:5px 12px;border-radius:999px;
+  background:var(--pink);color:var(--void);
+  font-family:var(--f-mono);font-size:9.5px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;
+}
+
+.pcard__name{
+  font-family:var(--f-display);font-size:1.28rem;font-weight:700;
+  letter-spacing:-.01em;color:var(--white);
+}
+.pcard__price{
+  display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;
+  margin-top:var(--s2);
+  font-family:var(--f-display);font-size:2.3rem;font-weight:700;
+  letter-spacing:-.035em;color:var(--white);line-height:1.1;
+}
+.pcard__cur{
+  font-family:var(--f-mono);font-size:.82rem;font-weight:500;
+  letter-spacing:.1em;color:var(--muted);align-self:center;
+}
+.pcard__bill{
+  font-family:var(--f-mono);font-size:var(--fs-mono);font-style:normal;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.pcard__tag{
+  margin-top:var(--s2);padding-bottom:var(--s3);
+  border-bottom:1px solid var(--line);
+  color:var(--text);font-size:.92rem;line-height:1.6;
+}
+
+.pcard__feat{margin-top:var(--s3);display:grid;gap:11px;flex:1}
+.pcard__feat li{
+  position:relative;padding-left:24px;
+  color:var(--text);font-size:.9rem;line-height:1.55;
+}
+.pcard__feat li::before{
+  content:'';position:absolute;left:0;top:.52em;
+  width:11px;height:6px;
+  border-left:1.5px solid var(--pink);border-bottom:1.5px solid var(--pink);
+  transform:rotate(-45deg);
+}
+.pcard--pop .pcard__feat li::before{border-color:var(--pink-hot)}
+
+.pcard__budget{
+  margin-top:var(--s3);padding:12px 14px;border-radius:var(--radius-sm);
+  background:var(--void);border:1px solid var(--line);
+  font-family:var(--f-mono);font-size:11px;color:var(--white);
+}
+.pcard__budget span{
+  display:block;margin-bottom:3px;
+  font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);
+}
+.pcard__cta{margin-top:var(--s3);width:100%;justify-content:center}
+
+.pnote{
+  margin-top:var(--s4);
+  color:var(--muted);font-size:.87rem;line-height:1.6;max-width:70ch;
+}
+
+/* ── 06 · TABLES ──────────────────────────────────────────── */
+.ptable-wrap{
+  margin-top:var(--s3);overflow-x:auto;
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  -webkit-overflow-scrolling:touch;
+}
+.ptable{width:100%;border-collapse:collapse;min-width:640px;font-size:.87rem}
+.ptable th,.ptable td{
+  padding:14px 16px;text-align:left;vertical-align:top;
+  border-bottom:1px solid var(--line);
+}
+.ptable thead th{
+  position:sticky;top:0;
+  background:var(--surface-hi);
+  font-family:var(--f-mono);font-size:var(--fs-mono);font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--white);
+  white-space:nowrap;
+}
+.ptable tbody th{color:var(--white);font-weight:500}
+.ptable tbody td{color:var(--text)}
+.ptable tbody tr:last-child th,
+.ptable tbody tr:last-child td{border-bottom:0}
+.ptable tbody tr:hover{background:var(--surface)}
+.ptable .is-no{color:var(--dim)}
+.ptable .is-price{
+  font-family:var(--f-mono);color:var(--white);white-space:nowrap;
+}
+
+/* Compare-all disclosure */
+.pcompare{margin-top:var(--s5)}
+.pcompare>summary,
+.pq>summary{
+  display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+  padding:var(--s3) 0;cursor:pointer;list-style:none;
+  border-top:1px solid var(--line);
+  color:var(--white);font-size:1rem;font-weight:500;
+}
+.pcompare>summary::-webkit-details-marker,
+.pq>summary::-webkit-details-marker{display:none}
+.pcompare>summary:hover,.pq>summary:hover{color:var(--pink-hot)}
+.pcompare>summary i,
+.pq>summary i{
+  position:relative;flex:none;width:16px;height:16px;opacity:.7;
+  transition:transform var(--t-med) var(--e-out),opacity var(--t-fast);
+}
+.pcompare>summary i::before,.pq>summary i::before,
+.pcompare>summary i::after,.pq>summary i::after{
+  content:'';position:absolute;left:50%;top:50%;background:var(--pink);
+  transform:translate(-50%,-50%);
+}
+.pcompare>summary i::before,.pq>summary i::before{width:16px;height:1px}
+.pcompare>summary i::after,.pq>summary i::after{
+  width:1px;height:16px;transition:transform var(--t-med) var(--e-out);
+}
+.pcompare[open]>summary i,.pq[open]>summary i{transform:rotate(90deg);opacity:1}
+.pcompare[open]>summary i::after,.pq[open]>summary i::after{transform:translate(-50%,-50%) scaleY(0)}
+
+/* ── 07 · BUNDLES ─────────────────────────────────────────── */
+.pbundles{
+  display:grid;grid-template-columns:1fr;gap:var(--s3);
+  margin-top:var(--s4);
+}
+.pbundle{
+  position:relative;padding:var(--s4);
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);
+  transition:transform var(--t-med) var(--e-out),border-color var(--t-med);
+}
+.pbundle:hover{transform:translateY(-4px);border-color:rgba(255,46,151,.35)}
+.pbundle__save{
+  display:inline-block;margin-bottom:var(--s2);
+  padding:4px 11px;border-radius:999px;
+  background:rgba(255,46,151,.14);border:1px solid rgba(255,46,151,.4);
+  font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--pink-hot);
+}
+.pbundle h3{
+  font-family:var(--f-display);font-size:1.15rem;font-weight:700;color:var(--white);
+}
+.pbundle__p{
+  display:flex;align-items:baseline;gap:6px;margin-top:6px;
+  font-family:var(--f-display);font-size:1.9rem;font-weight:700;
+  letter-spacing:-.03em;color:var(--white);
+}
+.pbundle__d{margin-top:4px;color:var(--muted);font-size:.88rem}
+.pbundle .btn{margin-top:var(--s3)}
+
+/* ── 08 · HOW IT WORKS ────────────────────────────────────── */
+.psteps{display:grid;grid-template-columns:1fr;gap:var(--s3)}
+.pstep{
+  position:relative;padding:var(--s4);
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+.pstep__n{
+  font-family:var(--f-mono);font-size:var(--fs-mono);font-weight:500;
+  letter-spacing:.2em;color:var(--pink);
+}
+.pstep__t{
+  margin-top:var(--s2);
+  font-family:var(--f-display);font-size:1.08rem;font-weight:700;color:var(--white);
+}
+.pstep__b{margin-top:8px;color:var(--text);font-size:.9rem;line-height:1.6}
+
+/* ── 09 · FAQ ─────────────────────────────────────────────── */
+.pfaq{border-bottom:1px solid var(--line)}
+.pq>summary{font-size:1.02rem;padding:var(--s3) 0}
+.pq__a{padding:0 0 var(--s3)}
+.pq__a p{color:var(--text);font-size:.94rem;line-height:1.72;max-width:78ch}
+.pfine{
+  margin-top:var(--s4);
+  color:var(--dim);font-size:.82rem;line-height:1.6;max-width:70ch;
+}
+
+/* ── 10 · FINAL CTA ───────────────────────────────────────── */
+.pcta{
+  position:relative;overflow:hidden;
+  padding-block:clamp(110px,16vh,190px);
+  background:var(--void);text-align:center;
+}
+.pcta__media{position:absolute;inset:0;z-index:var(--z-bg);pointer-events:none}
+.pcta__in{position:relative;z-index:var(--z-content)}
+.pcta__t{
+  margin-top:var(--s3);
+  font-family:var(--f-display);font-size:var(--fs-display);font-weight:700;
+  line-height:.96;letter-spacing:-.04em;text-transform:uppercase;color:var(--white);
+}
+.pcta__s{
+  margin:var(--s4) auto 0;max-width:56ch;
+  color:var(--text);font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.7;
+}
+.pcta .cta-row{margin-top:var(--s5);justify-content:center}
+.pcta .secnum{display:inline-block}
+
+/* Nav current-page marker now lives in style.css, shared by every page. */
+
+/* ── 12 · RESPONSIVE ──────────────────────────────────────── */
+@media (min-width:680px){
+  .pgrid--4{grid-template-columns:repeat(2,1fr)}
+  .pgrid--3{grid-template-columns:repeat(2,1fr)}
+  .pbundles{grid-template-columns:repeat(2,1fr)}
+  .psteps{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1024px){
+  .pgrid--3{grid-template-columns:repeat(3,1fr)}
+  .psteps{grid-template-columns:repeat(4,1fr)}
+  .phero__t{font-size:clamp(2.6rem,5vw,4.4rem)}
+}
+@media (min-width:1280px){
+  .pgrid--4{grid-template-columns:repeat(4,1fr)}
+  .pcard{padding:var(--s5) var(--s3) var(--s4)}
+}
+
+/* Sticky tab bar sits under the fixed site nav on wide screens only;
+   on phones the nav auto-hides on scroll so the tabs own the top edge. */
+@media (min-width:769px){
+  .ptabs{top:72px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html.anim .p-rise{opacity:1;transform:none}
+  .pcard:hover,.pbundle:hover{transform:none}
+}
+
+/* ── MOBILE LEGIBILITY ────────────────────────────────────── */
+/* Matches style.css §25: the 9.5–11px label tier is unreadable on a phone. */
+@media (max-width:768px){
+  .pcard__badge{font-size:12px;letter-spacing:.14em}
+  .pcard__budget{font-size:13px}
+  .pcard__budget span{font-size:12px;letter-spacing:.14em}
+  .pbundle__save{font-size:12px;letter-spacing:.14em}
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#04070D">
+
+<title>Web Designs — Danura Senan | Recent Website Projects</title>
+<meta name="description" content="Recent websites designed and built by Danura Senan — restaurants, hospitality, e-commerce and in-store displays across Sri Lanka, Dubai and Australia.">
+<meta name="author" content="Danura Senan">
+
+<link rel="canonical" href="https://dssenan.github.io/designs.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dssenan.github.io/designs.html">
+<meta property="og:title" content="Web Designs — Danura Senan">
+<meta property="og:description" content="Recent websites designed and built for restaurants, hospitality and retail across Sri Lanka, Dubai and Australia.">
+<meta property="og:image" content="https://dssenan.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Web Designs — Danura Senan">
+<meta name="twitter:description" content="Recent websites designed and built across Sri Lanka, Dubai and Australia.">
+<meta name="twitter:image" content="https://dssenan.github.io/assets/img/og-image.jpg">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css?v=202610191203">
+<link rel="stylesheet" href="work.css?v=202610191203">
+
+<script>
+/* Anti-FOUC motion gate — same contract as the other pages. */
+(function(){
+  var d = document.documentElement;
+  d.classList.add('js');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) d.classList.add('anim');
+  window.__DSFAIL = setTimeout(function(){
+    d.classList.remove('anim');
+    d.classList.add('nojs-open','p-show');
+  }, 5000);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"CollectionPage",
+      "@id":"https://dssenan.github.io/designs.html",
+      "url":"https://dssenan.github.io/designs.html",
+      "name":"Web Designs — Danura Senan",
+      "description":"Recent websites designed and built by Danura Senan.",
+      "isPartOf":{"@id":"https://dssenan.github.io/#website"},
+      "about":{"@id":"https://dssenan.github.io/#person"}
+    },
+    {
+      "@type":"ItemList",
+      "name":"Recent web designs",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Dark Roast Café","url":"https://drc.creastation.digital/"},
+        {"@type":"ListItem","position":2,"name":"The Kubana","url":"https://kubana.themparadu.com/"},
+        {"@type":"ListItem","position":3,"name":"Hot Bowl Satwa","url":"https://hotbowl.creastation.digital/"},
+        {"@type":"ListItem","position":4,"name":"Restaurant in the Reef","url":"https://reef.creastation.digital/"},
+        {"@type":"ListItem","position":5,"name":"Themparadu","url":"https://themparadu.com/"},
+        {"@type":"ListItem","position":6,"name":"Forest Feast","url":"https://forestfeast.creastation.digital/"},
+        {"@type":"ListItem","position":7,"name":"COCOE","url":"https://cocoe.creastation.digital/"},
+        {"@type":"ListItem","position":8,"name":"Sanelco Display","url":"https://sanelco.creastation.digital/"},
+        {"@type":"ListItem","position":9,"name":"Creastation Digital","url":"https://creastation.digital/"},
+        {"@type":"ListItem","position":10,"name":"This Portfolio","url":"https://dssenan.github.io/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<div class="cursor" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span></span></div>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__brand" href="index.html" aria-label="Danura Senan — home">
+      <span class="nav__dot"></span>DANURA SENAN
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="link" href="index.html">HOME</a>
+      <a class="link" href="index.html#pillars">WHAT&nbsp;I&nbsp;DO</a>
+      <a class="link" href="index.html#geo">GEO</a>
+      <a class="link" href="index.html#story">STORY</a>
+      <a class="link" href="index.html#work">INDUSTRIES</a>
+      <a class="link is-current" href="designs.html" aria-current="page">DESIGNS</a>
+      <a class="link" href="pricing.html">PRICING</a>
+    </nav>
+    <a class="btn btn--pill" data-wa data-magnetic href="https://wa.me/94706684344" target="_blank" rel="noopener noreferrer">
+      <span>LET'S TALK</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div class="mmenu" id="mobileMenu" aria-hidden="true">
+  <nav class="mmenu__in" aria-label="Mobile">
+    <a href="index.html">HOME</a>
+    <a href="index.html#pillars">WHAT I DO</a>
+    <a href="index.html#geo">GEO</a>
+    <a href="index.html#story">STORY</a>
+    <a href="index.html#services">CAPABILITIES</a>
+    <a href="index.html#work">INDUSTRIES</a>
+    <a href="designs.html">DESIGNS</a>
+    <a href="pricing.html">PRICING</a>
+    <a class="mmenu__wa" data-wa href="https://wa.me/94706684344" target="_blank" rel="noopener noreferrer">MESSAGE ON WHATSAPP →</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ══ 01 · HERO ══════════════════════════════════ -->
+<section class="whero" id="top">
+  <div class="whero__media" aria-hidden="true">
+    <div class="gridlines"></div>
+    <div class="glow glow--a"></div>
+    <div class="glow glow--b"></div>
+  </div>
+  <div class="container whero__in">
+    <p class="eyebrow p-rise">RECENT WORK</p>
+    <h1 class="whero__t p-rise">Sites I&rsquo;ve designed<br><span class="grad">and built.</span></h1>
+    <p class="whero__s p-rise">
+      Restaurants, hospitality, retail and in-store screens — across Sri Lanka, Dubai
+      and Australia, all of them built to do a job rather than just look good.
+      Every one is live; click through and judge them yourself.
+    </p>
+    <ul class="wstats p-rise">
+      <li><b>10</b><span>Live sites</span></li>
+      <li><b>5</b><span>Industries</span></li>
+      <li><b>3</b><span>Countries</span></li>
+      <li><b>3</b><span>Languages</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ 02 · PROJECT GRID ══════════════════════════ -->
+<section class="wsec" id="designs">
+  <div class="container">
+    <div class="wgrid">
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://drc.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Dark Roast Café — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/drc.jpg"
+                   alt="Homepage of the Dark Roast Café website"
+                   width="1200" height="750" loading="eager" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Café</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Dark Roast Café</h3>
+              <p class="wcard__host">drc.creastation.digital</p>
+              <p class="wcard__d">Locally grown coffee roasted in-house, across from Lake Gregory in Nuwara Eliya. Waffles, fresh juices and the D.R.C signatures — with the 5.0 Google rating and daily hours stated right up front.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Café</span><span>Menu</span><span>Nuwara Eliya</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://kubana.themparadu.com/" target="_blank" rel="noopener noreferrer"
+             aria-label="The Kubana — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/kubana.jpg"
+                   alt="Homepage of the The Kubana website"
+                   width="1200" height="750" loading="eager" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Boutique Stay</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">The Kubana</h3>
+              <p class="wcard__host">kubana.themparadu.com</p>
+              <p class="wcard__d">A timber A-frame chalet on Upper Lake Road, Nuwara Eliya — stone fireplace, a bath beside the fire and a loft under the eaves. Polaroid-stacked gallery, with the Booking.com and Google ratings stated up front.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Accommodation</span><span>Booking</span><span>Nuwara Eliya</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://hotbowl.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Hot Bowl Satwa — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/hotbowl.jpg"
+                   alt="Homepage of the Hot Bowl Satwa website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Restaurant</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Hot Bowl Satwa</h3>
+              <p class="wcard__host">hotbowl.creastation.digital</p>
+              <p class="wcard__d">Home-style Filipino comfort food in Satwa, Dubai — bulalo, silogs, bilao platters and halo-halo. Live open/closed status, a 4.9-star Google review panel, and ordering one tap away by call or WhatsApp.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Hospitality</span><span>Live Hours</span><span>Dubai</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://reef.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Restaurant in the Reef — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/reef.jpg"
+                   alt="Homepage of the Restaurant in the Reef website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Restaurant &amp; Resort</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Restaurant in the Reef</h3>
+              <p class="wcard__host">reef.creastation.digital</p>
+              <p class="wcard__d">A resort restaurant at Reef Resort Villas in Port Douglas, serving breakfast through dinner. Sage-and-cream palette, a live open/closed indicator in the hero, and the menu one tap from the top.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Hospitality</span><span>Live Hours</span><span>Australia</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://themparadu.com/" target="_blank" rel="noopener noreferrer"
+             aria-label="Themparadu — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/themparadu.jpg"
+                   alt="Homepage of the Themparadu website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Restaurant</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Themparadu</h3>
+              <p class="wcard__host">themparadu.com</p>
+              <p class="wcard__d">A taste of Sri Lankan heritage, up in the hills of Nuwara Eliya. Dark, food-forward design built around the two things a hungry visitor actually wants — the menu, and a one-tap call button.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Own Domain</span><span>Menu</span><span>WhatsApp</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://forestfeast.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Forest Feast — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/forestfeast.jpg"
+                   alt="Homepage of the Forest Feast website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Restaurant &amp; Stay</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Forest Feast</h3>
+              <p class="wcard__host">forestfeast.creastation.digital</p>
+              <p class="wcard__d">An organic farm-to-table restaurant inside a greenhouse in Blackpool, Nuwara Eliya, with a quiet farm stay next door. Warm editorial layout that splits diners and overnight guests into two clear paths.</p>
+              <div class="chips wcard__tags"><span>Web Design</span><span>Reservations</span><span>Gallery</span><span>Farm Stay</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://cocoe.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="COCOE — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/cocoa.jpg"
+                   alt="Homepage of the COCOE website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">E-commerce</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">COCOE</h3>
+              <p class="wcard__host">cocoe.creastation.digital</p>
+              <p class="wcard__d">A pre-order fashion store for shoes, clothing and bags. Category browsing, sale pricing and a three-step pre-order flow — order, pay half, delivered island-wide to all 25 districts.</p>
+              <div class="chips wcard__tags"><span>E-commerce</span><span>Next.js</span><span>Pre-Order Flow</span><span>Island-wide</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://sanelco.creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Sanelco Display — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/sanelco.jpg"
+                   alt="Homepage of the Sanelco Display website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">In-store Display</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Sanelco Display</h3>
+              <p class="wcard__host">sanelco.creastation.digital</p>
+              <p class="wcard__d">A supermarket price board built for a screen on the shop wall. Live clock, rotating promotions and today&rsquo;s prices in Sinhala and Tamil — updated weekly without anyone touching the code.</p>
+              <div class="chips wcard__tags"><span>Digital Signage</span><span>Sinhala</span><span>Tamil</span><span>Weekly Updates</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="https://creastation.digital/" target="_blank" rel="noopener noreferrer"
+             aria-label="Creastation Digital — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/creastation.jpg"
+                   alt="Homepage of the Creastation Digital website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Agency</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">Creastation Digital</h3>
+              <p class="wcard__host">creastation.digital</p>
+              <p class="wcard__d">Outcome-driven digital agency — brand strategy, content creation, performance marketing and high-conversion websites. A motion-led dark identity carrying over ten years of creative work.</p>
+              <div class="chips wcard__tags"><span>Brand</span><span>Motion</span><span>Agency Site</span><span>Portfolio</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="wcard p-rise">
+          <a class="wcard__link" href="index.html"
+             aria-label="This Portfolio — open site">
+            <div class="wcard__shot">
+              <img src="assets/img/work/portfolio.jpg"
+                   alt="Homepage of the This Portfolio website"
+                   width="1200" height="750" loading="lazy" decoding="async">
+              <span class="wcard__go" aria-hidden="true">Visit site <em>↗</em></span>
+            </div>
+            <div class="wcard__body">
+              <div class="wcard__top">
+                <span class="wcard__cat">Personal</span>
+                <span class="wcard__yr">2026</span>
+              </div>
+              <h3 class="wcard__name">This Portfolio</h3>
+              <p class="wcard__host">dssenan.github.io</p>
+              <p class="wcard__d">The site you are on. A cinematic single-page portfolio with scroll-scrubbed scenes, a horizontal career timeline, a GEO section on AI search — and the pricing page next door.</p>
+              <div class="chips wcard__tags"><span>GSAP</span><span>ScrollTrigger</span><span>GEO</span><span>Single Page</span></div>
+            </div>
+          </a>
+        </article>
+    </div>
+
+    <p class="wnote p-rise">
+      Screenshots are captured from the live sites, so what you see here is what
+      is running today. Client work is shown with permission.
+    </p>
+  </div>
+</section>
+
+<!-- ══ 03 · CTA ═══════════════════════════════════ -->
+<section class="wcta" id="cta">
+  <div class="wcta__media" aria-hidden="true">
+    <div class="gridlines"></div>
+    <div class="glow glow--d"></div>
+  </div>
+  <div class="container wcta__in">
+    <span class="secnum p-rise">02 / YOUR TURN</span>
+    <h2 class="wcta__t p-rise">Want one<br><span class="grad">like these?</span></h2>
+    <p class="wcta__s p-rise">
+      Tell me what your business does and who you need to reach. I&rsquo;ll tell you
+      honestly what kind of site would actually move the needle — and what it costs.
+    </p>
+    <div class="cta-row p-rise">
+      <a class="btn btn--primary btn--lg" data-magnetic href="https://wa.me/94706684344?text=Hi!%20I%20saw%20your%20web%20designs%20and%20I'd%20like%20to%20talk%20about%20a%20site%20for%20my%20business." target="_blank" rel="noopener noreferrer">
+        <span>Start a project</span><em class="arr">→</em>
+      </a>
+      <a class="btn btn--ghost" data-magnetic href="pricing.html"><span>See pricing</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container foot__grid">
+    <div class="foot__col">
+      <p class="foot__name">DANURA SENAN</p>
+      <p class="foot__role">Digital Marketing Specialist</p>
+      <p class="foot__b">Building growth systems for hotels, restaurants and travel brands across Sri Lanka.</p>
+    </div>
+    <div class="foot__col">
+      <p class="foot__h">NAVIGATE</p>
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="index.html#pillars">What I Do</a>
+      <a class="link" href="index.html#geo">GEO</a>
+      <a class="link" href="index.html#story">Story</a>
+      <a class="link" href="designs.html">Designs</a>
+      <a class="link" href="index.html#work">Industries</a>
+      <a class="link" href="pricing.html">Pricing</a>
+    </div>
+    <div class="foot__col">
+      <p class="foot__h">CONNECT</p>
+      <a class="link link--arr" data-wa href="https://wa.me/94706684344" target="_blank" rel="noopener noreferrer">WhatsApp <em>→</em></a>
+      <a class="link link--arr" href="https://www.linkedin.com/in/danura-senan-b763a3a5/" target="_blank" rel="noopener noreferrer">LinkedIn <em>→</em></a>
+    </div>
+  </div>
+
+  <div class="foot__mark" aria-hidden="true"><span>DANURA SENAN</span></div>
+
+  <div class="container foot__bar">
+    <span>© 2026 DANURA SENAN</span>
+    <span class="foot__coord">6.9271° N, 79.8612° E</span>
+    <span><i class="pulsedot"></i>AVAILABLE</span>
+    <span>DESIGNED &amp; BUILT IN SRI LANKA</span>
+  </div>
+</footer>
+
+<a class="fab" id="fab" data-wa data-magnetic href="https://wa.me/94706684344" target="_blank" rel="noopener noreferrer" aria-label="Message Danura on WhatsApp">
+  <span class="fab__ring" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.2 4.2c-.15 0-.4.06-.6.29-.21.22-.8.78-.8 1.9s.82 2.2.93 2.36c.12.15 1.6 2.44 3.88 3.42.54.23.96.37 1.29.48.54.17 1.04.15 1.43.09.43-.07 1.34-.55 1.53-1.08.19-.53.19-.98.13-1.08-.06-.09-.21-.15-.43-.26-.23-.12-1.34-.66-1.55-.74-.2-.07-.36-.11-.51.12s-.58.73-.71.88c-.13.15-.26.17-.49.06-.22-.12-.94-.35-1.8-1.11-.66-.6-1.11-1.32-1.24-1.55-.13-.22-.01-.34.1-.46.1-.1.22-.26.34-.4.11-.13.15-.22.22-.37.08-.15.04-.28-.02-.4-.06-.11-.51-1.23-.7-1.68-.18-.44-.37-.38-.51-.39h-.44z"/></svg>
+  <span class="fab__label">LET'S TALK</span>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="script.js?v=202610191203" defer></script>
+<script src="work.js?v=202610191203" defer></script>
+
+</body>
+</html>

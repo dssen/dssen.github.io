@@ -1,0 +1,182 @@
+{
+  "stats": [
+    {
+      "n": "9",
+      "label": "Live sites"
+    },
+    {
+      "n": "5",
+      "label": "Industries"
+    },
+    {
+      "n": "3",
+      "label": "Countries"
+    },
+    {
+      "n": "3",
+      "label": "Languages"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "drc",
+      "name": "Dark Roast Café",
+      "year": "2026",
+      "cat": "Café",
+      "url": "https://drc.creastation.digital/",
+      "host": "drc.creastation.digital",
+      "internal": false,
+      "d": "Locally grown coffee roasted in-house, across from Lake Gregory in Nuwara Eliya. Waffles, fresh juices and the D.R.C signatures — with the 5.0 Google rating and daily hours stated right up front.",
+      "tags": [
+        "Web Design",
+        "Café",
+        "Menu",
+        "Nuwara Eliya"
+      ]
+    },
+    {
+      "slug": "kubana",
+      "name": "The Kubana",
+      "year": "2026",
+      "cat": "Boutique Stay",
+      "url": "https://kubana.themparadu.com/",
+      "host": "kubana.themparadu.com",
+      "internal": false,
+      "d": "A timber A-frame chalet on Upper Lake Road, Nuwara Eliya — stone fireplace, a bath beside the fire and a loft under the eaves. Polaroid-stacked gallery, with the Booking.com and Google ratings stated up front.",
+      "tags": [
+        "Web Design",
+        "Accommodation",
+        "Booking",
+        "Nuwara Eliya"
+      ]
+    },
+    {
+      "slug": "hotbowl",
+      "name": "Hot Bowl Satwa",
+      "year": "2026",
+      "cat": "Restaurant",
+      "url": "https://hotbowl.creastation.digital/",
+      "host": "hotbowl.creastation.digital",
+      "internal": false,
+      "d": "Home-style Filipino comfort food in Satwa, Dubai — bulalo, silogs, bilao platters and halo-halo. Live open/closed status, a 4.9-star Google review panel, and ordering one tap away by call or WhatsApp.",
+      "tags": [
+        "Web Design",
+        "Hospitality",
+        "Live Hours",
+        "Dubai"
+      ]
+    },
+    {
+      "slug": "reef",
+      "name": "Restaurant in the Reef",
+      "year": "2026",
+      "cat": "Restaurant &amp; Resort",
+      "url": "https://reef.creastation.digital/",
+      "host": "reef.creastation.digital",
+      "internal": false,
+      "d": "A resort restaurant at Reef Resort Villas in Port Douglas, serving breakfast through dinner. Sage-and-cream palette, a live open/closed indicator in the hero, and the menu one tap from the top.",
+      "tags": [
+        "Web Design",
+        "Hospitality",
+        "Live Hours",
+        "Australia"
+      ]
+    },
+    {
+      "slug": "themparadu",
+      "name": "Themparadu",
+      "year": "2026",
+      "cat": "Restaurant",
+      "url": "https://themparadu.com/",
+      "host": "themparadu.com",
+      "internal": false,
+      "d": "A taste of Sri Lankan heritage, up in the hills of Nuwara Eliya. Dark, food-forward design built around the two things a hungry visitor actually wants — the menu, and a one-tap call button.",
+      "tags": [
+        "Web Design",
+        "Own Domain",
+        "Menu",
+        "WhatsApp"
+      ]
+    },
+    {
+      "slug": "forestfeast",
+      "name": "Forest Feast",
+      "year": "2026",
+      "cat": "Restaurant &amp; Stay",
+      "url": "https://forestfeast.creastation.digital/",
+      "host": "forestfeast.creastation.digital",
+      "internal": false,
+      "d": "An organic farm-to-table restaurant inside a greenhouse in Blackpool, Nuwara Eliya, with a quiet farm stay next door. Warm editorial layout that splits diners and overnight guests into two clear paths.",
+      "tags": [
+        "Web Design",
+        "Reservations",
+        "Gallery",
+        "Farm Stay"
+      ]
+    },
+    {
+      "slug": "cocoa",
+      "name": "COCOE",
+      "year": "2026",
+      "cat": "E-commerce",
+      "url": "https://cocoe.creastation.digital/",
+      "host": "cocoe.creastation.digital",
+      "internal": false,
+      "d": "A pre-order fashion store for shoes, clothing and bags. Category browsing, sale pricing and a three-step pre-order flow — order, pay half, delivered island-wide to all 25 districts.",
+      "tags": [
+        "E-commerce",
+        "Next.js",
+        "Pre-Order Flow",
+        "Island-wide"
+      ]
+    },
+    {
+      "slug": "sanelco",
+      "name": "Sanelco Display",
+      "year": "2026",
+      "cat": "In-store Display",
+      "url": "https://sanelco.creastation.digital/",
+      "host": "sanelco.creastation.digital",
+      "internal": false,
+      "d": "A supermarket price board built for a screen on the shop wall. Live clock, rotating promotions and today&rsquo;s prices in Sinhala and Tamil — updated weekly without anyone touching the code.",
+      "tags": [
+        "Digital Signage",
+        "Sinhala",
+        "Tamil",
+        "Weekly Updates"
+      ]
+    },
+    {
+      "slug": "creastation",
+      "name": "Creastation Digital",
+      "year": "2026",
+      "cat": "Agency",
+      "url": "https://creastation.digital/",
+      "host": "creastation.digital",
+      "internal": false,
+      "d": "Outcome-driven digital agency — brand strategy, content creation, performance marketing and high-conversion websites. A motion-led dark identity carrying over ten years of creative work.",
+      "tags": [
+        "Brand",
+        "Motion",
+        "Agency Site",
+        "Portfolio"
+      ]
+    },
+    {
+      "slug": "portfolio",
+      "name": "This Portfolio",
+      "year": "2026",
+      "cat": "Personal",
+      "url": "index.html",
+      "host": "danura.creastation.digital",
+      "internal": true,
+      "d": "The site you are on. A cinematic single-page portfolio with scroll-scrubbed scenes, a horizontal career timeline, a GEO section on AI search — and the pricing page next door.",
+      "tags": [
+        "GSAP",
+        "ScrollTrigger",
+        "GEO",
+        "Single Page"
+      ]
+    }
+  ]
+}

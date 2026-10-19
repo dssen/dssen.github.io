@@ -1,0 +1,21 @@
+# This repository is public and is served directly by GitHub Pages, so anything
+# committed here is readable by anyone and stays in history forever. Keep
+# internal material out.
+
+# macOS
+.DS_Store
+
+# Internal documents — business positioning, pricing strategy, client context
+BUILD-PLAN.md
+PRODUCT.md
+CLAUDE.md
+
+# Raw source images (~6 MB). The optimised versions in assets/img/ are what the
+# site actually serves.
+Media/
+
+# Local agent/tooling state
+.impeccable/
+
+# Build scratch
+*.zip

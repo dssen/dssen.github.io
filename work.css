@@ -1,0 +1,167 @@
+/* ══════════════════════════════════════════════════════════════
+   DANURA SENAN — Web designs page
+   Loads after style.css and inherits its tokens. The .p-rise reveal
+   primitive lives in style.css and is shared with pricing.css.
+   All selectors here are w-prefixed and scoped to this page, apart
+   from the documented exception below.
+   ══════════════════════════════════════════════════════════════ */
+
+/* EXCEPTION — style.css pre-hides .sechead__s for the home page, where each
+   section's own init() reveals it. No such init runs here. */
+html.anim .wsec .sechead__s{opacity:1}
+
+/* ── 01 · HERO ────────────────────────────────────────────── */
+.whero{
+  position:relative;overflow:hidden;background:var(--void);
+  padding-block:clamp(140px,20vh,220px) clamp(50px,7vh,90px);
+}
+.whero__media{position:absolute;inset:0;z-index:var(--z-bg);pointer-events:none}
+.whero__in{position:relative;z-index:var(--z-content)}
+.whero__t{
+  margin-top:var(--s3);max-width:15ch;
+  font-family:var(--f-display);font-size:var(--fs-h1);font-weight:700;
+  line-height:1.02;letter-spacing:-.035em;color:var(--white);
+}
+.whero__s{
+  margin-top:var(--s3);max-width:62ch;
+  color:var(--text);font-size:clamp(1rem,1.3vw,1.14rem);line-height:1.7;
+}
+
+.wstats{
+  display:flex;flex-wrap:wrap;gap:var(--s5);
+  margin-top:var(--s5);padding-top:var(--s4);
+  border-top:1px solid var(--line);
+}
+.wstats li{display:flex;flex-direction:column;gap:2px}
+.wstats b{
+  font-family:var(--f-display);font-size:1.8rem;font-weight:700;
+  letter-spacing:-.03em;color:var(--white);line-height:1;
+}
+.wstats span{
+  font-family:var(--f-mono);font-size:var(--fs-mono);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+
+/* ── 02 · GRID ────────────────────────────────────────────── */
+.wsec{padding-block:clamp(60px,8vh,110px) var(--sec-pad);background:var(--void)}
+.wgrid{display:grid;grid-template-columns:1fr;gap:var(--s4)}
+
+.wcard{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);overflow:hidden;
+  box-shadow:var(--sh-card);
+  transition:transform var(--t-med) var(--e-out),
+             border-color var(--t-med),background-color var(--t-med);
+}
+.wcard:hover{
+  transform:translateY(-6px);
+  border-color:rgba(255,46,151,.34);
+  background:var(--surface-hi);
+}
+.wcard__link{display:block;color:inherit}
+
+/* Screenshot */
+.wcard__shot{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:var(--deep);
+  aspect-ratio:1200/750;
+}
+.wcard__shot img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  filter:saturate(.82) brightness(.84);
+  transition:transform 1.1s var(--e-out),filter .8s var(--e-out);
+}
+.wcard:hover .wcard__shot img{
+  transform:scale(1.035);
+  filter:saturate(1) brightness(1);
+}
+/* Visit-site affordance, revealed on hover */
+.wcard__go{
+  position:absolute;right:var(--s3);bottom:var(--s3);
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 16px;border-radius:999px;
+  background:rgba(8,13,22,.82);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border:1px solid rgba(255,46,151,.5);
+  font-family:var(--f-mono);font-size:10px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--white);
+  opacity:0;transform:translateY(8px);
+  transition:opacity var(--t-med) var(--e-out),transform var(--t-med) var(--e-out);
+}
+.wcard__go em{font-style:normal;color:var(--pink-hot)}
+.wcard:hover .wcard__go,
+.wcard__link:focus-visible .wcard__go{opacity:1;transform:none}
+
+/* Body */
+.wcard__body{padding:var(--s4)}
+.wcard__top{
+  display:flex;align-items:center;justify-content:space-between;gap:var(--s2);
+  font-family:var(--f-mono);font-size:var(--fs-mono);
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.wcard__cat{color:var(--pink)}
+.wcard__yr{color:var(--dim)}
+.wcard__name{
+  margin-top:var(--s2);
+  font-family:var(--f-display);font-size:1.5rem;font-weight:700;
+  letter-spacing:-.02em;color:var(--white);line-height:1.1;
+}
+.wcard__host{
+  margin-top:5px;
+  font-family:var(--f-mono);font-size:11px;color:var(--muted);
+  word-break:break-all;
+}
+.wcard__d{
+  margin-top:var(--s3);padding-top:var(--s3);
+  border-top:1px solid var(--line);
+  color:var(--text);font-size:.93rem;line-height:1.68;
+}
+.wcard__tags{margin-top:var(--s3)}
+
+.wnote{
+  margin-top:var(--s5);
+  color:var(--dim);font-size:.84rem;line-height:1.6;max-width:70ch;
+}
+
+/* ── 03 · CTA ─────────────────────────────────────────────── */
+.wcta{
+  position:relative;overflow:hidden;text-align:center;background:var(--void);
+  padding-block:clamp(110px,16vh,190px);
+}
+.wcta__media{position:absolute;inset:0;z-index:var(--z-bg);pointer-events:none}
+.wcta__in{position:relative;z-index:var(--z-content)}
+.wcta .secnum{display:inline-block}
+.wcta__t{
+  margin-top:var(--s3);
+  font-family:var(--f-display);font-size:var(--fs-display);font-weight:700;
+  line-height:.96;letter-spacing:-.04em;text-transform:uppercase;color:var(--white);
+}
+.wcta__s{
+  margin:var(--s4) auto 0;max-width:58ch;
+  color:var(--text);font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.7;
+}
+.wcta .cta-row{margin-top:var(--s5);justify-content:center}
+
+/* ── 04 · RESPONSIVE ──────────────────────────────────────── */
+@media (min-width:760px){
+  .wgrid{grid-template-columns:repeat(2,1fr)}
+  .whero__t{font-size:clamp(2.6rem,5.4vw,4.4rem)}
+}
+@media (min-width:1280px){
+  .wgrid{gap:var(--s5)}
+  .wcard__body{padding:var(--s5) var(--s4)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .wcard:hover{transform:none}
+  .wcard:hover .wcard__shot img{transform:none}
+  .wcard__go{opacity:1;transform:none}
+}
+
+/* ── MOBILE LEGIBILITY ────────────────────────────────────── */
+/* Matches style.css §25. */
+@media (max-width:768px){
+  .wcard__go{font-size:12px;letter-spacing:.12em}
+  .wcard__host{font-size:12.5px}
+}
